@@ -1,5 +1,26 @@
 #include <iostream>
 using namespace std;
+bool isprime(int number);
+
+int main()
+{
+	int count;
+	cout<<"Enter number : ";
+	int number;
+	cin>>number;
+
+	for(int n = 1; n <= number;n++ )
+	{
+		if(isprime(n)){
+			cout<<n<<"\t";
+			count++;
+			if(count % 5 == 0)cout<<'\n';
+		}
+	}
+	cout<<"\nPrime numbers found : "<<count<<'\n';
+	return 0;
+}
+
 bool isprime(int number)
 {	
 	bool prime = false;
@@ -23,21 +44,4 @@ bool isprime(int number)
 	return prime;
 }
 
-int main()
-{
-	int count;
-	cout<<"Enter number : ";
-	int number;
-	cin>>number;
 
-	for(int n = 1; n <= number;n++ )
-	{
-		if(isprime(n)){
-			cout<<n<<"\t";
-			count++;
-			if(count % 5 == 0)cout<<'\n';
-		}
-	}
-	cout<<"\nPrime numbers found : "<<count<<'\n';
-	return 0;
-}
