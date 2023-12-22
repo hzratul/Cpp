@@ -1,4 +1,5 @@
-#include <iostream>
+# include <iostream>
+# include <math.h>
 using namespace std;
 bool isprime(int number);
 
@@ -9,7 +10,7 @@ int main()
 	int number;
 	cin>>number;
 
-	for(int n = 1; n <= number;n++ )
+	for(int n = 1; n <= sqrt(number);n++ )
 	{
 		if(isprime(n)){
 			cout<<n<<"\t";
