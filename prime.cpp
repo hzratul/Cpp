@@ -1,16 +1,16 @@
 # include <iostream>
 # include <math.h>
 using namespace std;
-bool isprime(int number);
+bool isprime(unsigned long int number);
 
 int main()
 {
 	int count;
 	cout<<"Enter number : ";
-	int number;
+    unsigned long int number;
 	cin>>number;
 
-	for(int n = 1; n <= sqrt(number);n++ )
+	for(unsigned long int n = 1; n <= number;n++ )
 	{
 		if(isprime(n)){
 			cout<<n<<"\t";
@@ -22,7 +22,7 @@ int main()
 	return 0;
 }
 
-bool isprime(int number)
+bool isprime(unsigned long int number)
 {	
 	bool prime = false;
 	if (number == 1) prime = true;
@@ -31,9 +31,9 @@ bool isprime(int number)
 
 	else if(number > 3 && prime == false)
 	{
-		int div;
-		for(div = 2; div < number; div++)
-		{
+		unsigned int div;
+		for(unsigned div = 2; div <= sqrt(number); div++)
+	    {
 			if(number % div == 0)
 			{
 				prime = false;
@@ -42,7 +42,7 @@ bool isprime(int number)
 			else prime = true;
 		}
 	}
-	return prime;
+return prime;
 }
 
 
